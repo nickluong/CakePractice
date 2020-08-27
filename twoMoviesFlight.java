@@ -20,7 +20,11 @@ public class Solution {
         for(int firstMovieLength : movieLengths) {
 
             int matchingSecondMovieLength = flightLength - firstMovieLength;
-            if (movieLength)
+            if (movieLengthsSeen.contains(matchingSecondMovieLength)) {
+                return true;
+            }
+
+            movieLengthsSeen.add(firstMovieLength);
         }
         
 
